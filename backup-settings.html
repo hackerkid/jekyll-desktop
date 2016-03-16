@@ -139,13 +139,10 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Enabled Configurations</h4>
-                                    <br>
-                                    <silent>These settings are loaded from _config.yml file.<br></silent>
-
+                                    <h4 class="title">Website Settings</h4>
                                 </div>
                                 <div class="content">
                                     <form>
@@ -154,8 +151,8 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <small>url</small>
-                                                    <input type="text" class="form-control" value="http://vishnuks.com">
+                                                    <label>Site Name</label>
+                                                    <input type="text" class="form-control" placeholder="Easily identifiable name for your website">
                                                 </div>
                                             </div>
                                         </div>
@@ -163,8 +160,39 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <small>baseurl</small>
-                                                    <input type="text" class="form-control" value="/blog" placeholder="Serve the website from the given base URL">
+                                                    <label>Automatically upload the site to server </label>
+
+                                                    <div class="dropdown">
+
+
+                                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Yes
+                                                            <span class="caret"></span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Yes</a></li>
+                                                            <li><a href="#">No</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Upload Content</label>
+
+
+                                                    <div class="dropdown">
+
+
+                                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">HTML (_site)
+                                                            <span class="caret"></span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">HTML (_site)</a></li>
+                                                            <li><a href="#">Jekyll Files</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,36 +200,56 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <small>permalink</small>
-                                                    <input type="text" class="form-control" value="/:title" placeholder="Default: /year/month/day/title.html">
+                                                    <label>Enable Git</label>
+
+                                                    <div class="dropdown">
+
+
+                                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Yes
+                                                            <span class="caret"></span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Yes</a></li>
+                                                            <li><a href="#">No</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                           <div class="row">
+
+
+                                        <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <small>highlighter</small>
-                                                    <input type="text" class="form-control" value="pygments">
+                                                    <label>Site Source</label>
+                                                    <input type="text" class="form-control" placeholder="Change the directory where Jekyll will read files">
                                                 </div>
                                             </div>
                                         </div>
 
-                                         <div class="row">
+                                        <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <small>markdown</small>
-                                                    <input type="text" class="form-control" value="rdiscount" placeholder="Default is kramdown">
+                                                    <label>Site Destination</label>
+                                                    <input type="text" class="form-control" placeholder="Change the directory where Jekyll will write files">
                                                 </div>
                                             </div>
                                         </div>
 
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Jekyll Desktop Configuration File</label>
+                                                    <input type="text" class="form-control" placeholder="Change the directory where Jekyll Desktop would store it's configuration">
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <small>timezone</label>
-                                                    <input type="text" value="Asia/Calcutta"class="form-control" placeholder="Set the time zone for site generation">
+                                                    <label for="exampleInputEmail1">Time Zone</label>
+                                                    <input type="email" class="form-control" placeholder="Set the time zone for site generation">
 
                                                 </div>
                                             </div>
@@ -209,7 +257,7 @@
                                         </div>
 
 
-                                        
+
 
 
                                         <button type="submit" class="btn btn-info btn-fill pull-right">Update Settings</button>
@@ -219,61 +267,8 @@
                             </div>
                         </div>
 
-                         <div class="col-md-6">
-                            <div class="card">
-                                <div class="header">
-                                    <h4 class="title">Add New Configuration</h4>
-                                </div>
-                                <div class="content">
-                                    <form>
-
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label>Variable Name</label>
-                                                    <input type="text" class="form-control" placeholder="Enter the name of the variable">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label>Variable Value</label>
-                                                    <input type="text" class="form-control" placeholder="Enter the value of the variable">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                  
-
-
-                                        <button type="submit" class="btn btn-info btn-fill pull-right">Add Configuration</button>
-                                        <div class="clearfix"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
 
                     </div>
-
-					
-
-
-
-            
-
-
-
-
-
-
-
-
                 </div>
             </div>
 
